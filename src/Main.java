@@ -19,7 +19,7 @@ public class Main {
             result = new int[readLength];
             for (int i = offset, j = 0; i < offset + readLength; i++, j++) {
                 double priceDouble = price[i];
-                int newPrice = (int) (priceDouble - (priceDouble / 100 * discount));
+                double newPrice = (priceDouble - (priceDouble / 100 * discount));
                 result[j] = (int) newPrice;
             }
         }
